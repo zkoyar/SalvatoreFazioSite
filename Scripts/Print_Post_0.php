@@ -8,7 +8,7 @@ $tab="Frasi";
 $matricola=$_POST['data'];
 mysql_connect($host, $username, $password) or die("Impossibile connettersi al server: " . mysql_error());
 mysql_select_db($db_nome) or die ("Accesso al database non riuscito: " . mysql_error());
-$sql = "SELECT * FROM $tab ORDER By scritta DESC   ";
+$sql = "SELECT * FROM $tab ORDER By scritta DESC  LIMIT 0 ";
 $result = mysql_query($sql);
 $i=1;
 while($row = mysql_fetch_array($result)) 
